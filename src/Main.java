@@ -79,6 +79,10 @@ public class Main extends javax.swing.JFrame {
 
         BG = new javax.swing.JPanel();
         TopPanel = new javax.swing.JPanel();
+        stat1 = new javax.swing.JLabel();
+        stat2 = new javax.swing.JLabel();
+        stat3 = new javax.swing.JLabel();
+        stat4 = new javax.swing.JLabel();
         TextPanel = new javax.swing.JPanel();
         text = new javax.swing.JLabel();
         LeftOptionPanel = new javax.swing.JPanel();
@@ -94,19 +98,56 @@ public class Main extends javax.swing.JFrame {
 
         TopPanel.setBackground(new java.awt.Color(101, 66, 105));
 
+        stat1.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
+        stat1.setForeground(new java.awt.Color(255, 255, 255));
+        stat1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        stat1.setText("5");
+
+        stat2.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
+        stat2.setForeground(new java.awt.Color(255, 255, 255));
+        stat2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        stat2.setText("5");
+
+        stat3.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
+        stat3.setForeground(new java.awt.Color(255, 255, 255));
+        stat3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        stat3.setText("5");
+
+        stat4.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
+        stat4.setForeground(new java.awt.Color(255, 255, 255));
+        stat4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        stat4.setText("5");
+
         javax.swing.GroupLayout TopPanelLayout = new javax.swing.GroupLayout(TopPanel);
         TopPanel.setLayout(TopPanelLayout);
         TopPanelLayout.setHorizontalGroup(
             TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(TopPanelLayout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addComponent(stat1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(stat2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addComponent(stat3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addComponent(stat4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47))
         );
         TopPanelLayout.setVerticalGroup(
             TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(TopPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(stat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(stat2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(stat3, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE))
+                    .addComponent(stat4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         TextPanel.setBackground(new java.awt.Color(101, 66, 105));
-        TextPanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        TextPanel.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
         text.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
         text.setForeground(new java.awt.Color(255, 255, 255));
@@ -131,7 +172,7 @@ public class Main extends javax.swing.JFrame {
         );
 
         LeftOptionPanel.setBackground(new java.awt.Color(101, 66, 105));
-        LeftOptionPanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        LeftOptionPanel.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
         op1.setForeground(new java.awt.Color(255, 255, 255));
         op1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -172,7 +213,7 @@ public class Main extends javax.swing.JFrame {
         );
 
         RightOptionPanel.setBackground(new java.awt.Color(101, 66, 105));
-        RightOptionPanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        RightOptionPanel.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
         op2.setForeground(new java.awt.Color(255, 255, 255));
         op2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -271,17 +312,14 @@ public class Main extends javax.swing.JFrame {
         System.out.println("Left");
         
         //Assignment      
-        chur = thisGame.assignChur(chur, chur1[cardNum]);
-        pop = thisGame.assignPop(pop, pop1[cardNum]);
-        army = thisGame.assignArmy(army, army1[cardNum]);
-        mon = thisGame.assignMon(mon, mon1[cardNum]);
+        assignLeft();
         
         //Check values (OutOfBounds, cardNum, Misc conditions)
         //Continue if nothing flags
         checkAndContinue();
         
     }//GEN-LAST:event_img1MouseClicked
-
+    
     
     
     
@@ -292,10 +330,7 @@ public class Main extends javax.swing.JFrame {
         System.out.println("Right");
         
         //Assignment
-        chur = thisGame.assignChur(chur, chur2[cardNum]);
-        pop = thisGame.assignPop(pop, pop2[cardNum]);
-        army = thisGame.assignArmy(army, army2[cardNum]);
-        mon = thisGame.assignMon(mon, mon2[cardNum]);
+        assignRight();
         
         //Check values (OutOfBounds, cardNum, Misc conditions)
         //Continue if nothing flags
@@ -303,7 +338,42 @@ public class Main extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_img2MouseClicked
-
+    
+    
+    
+    
+    
+    public void assignLeft(){
+        
+        //New values
+        chur = thisGame.assignChur(chur, chur1[cardNum]);
+        pop = thisGame.assignPop(pop, pop1[cardNum]);
+        army = thisGame.assignArmy(army, army1[cardNum]);
+        mon = thisGame.assignMon(mon, mon1[cardNum]);
+        
+        //Change in gui
+        stat1.setText("" + chur);
+        stat2.setText("" + pop);
+        stat3.setText("" + army);
+        stat4.setText("" + mon);
+          
+    }
+    
+    public void assignRight(){
+        
+        //New values
+        chur = thisGame.assignChur(chur, chur2[cardNum]);
+        pop = thisGame.assignPop(pop, pop2[cardNum]);
+        army = thisGame.assignArmy(army, army2[cardNum]);
+        mon = thisGame.assignMon(mon, mon2[cardNum]);
+        
+        //Change in gui
+        stat1.setText("" + chur);
+        stat2.setText("" + pop);
+        stat3.setText("" + army);
+        stat4.setText("" + mon);
+        
+    }
     
     public void checkAndContinue(){
     
@@ -413,6 +483,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel img2;
     private javax.swing.JLabel op1;
     private javax.swing.JLabel op2;
+    private javax.swing.JLabel stat1;
+    private javax.swing.JLabel stat2;
+    private javax.swing.JLabel stat3;
+    private javax.swing.JLabel stat4;
     private javax.swing.JLabel text;
     // End of variables declaration//GEN-END:variables
 }
