@@ -22,6 +22,11 @@ public class Main extends javax.swing.JFrame {
     int mon = 5;
     
     
+    // Special conditions
+    
+    
+    Game thisGame = new Game(cardNum, chur, pop, army, mon);
+    
     //Arrays
     //Option 1
     int[] chur1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -263,18 +268,94 @@ public class Main extends javax.swing.JFrame {
     private void img1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_img1MouseClicked
         // TODO add your handling code here:
         
-        System.out.println("Boop");
+        System.out.println("Left");
         
+        //Assignment      
+        chur = thisGame.assignChur(chur, chur1[cardNum]);
+        pop = thisGame.assignPop(pop, pop1[cardNum]);
+        army = thisGame.assignArmy(army, army1[cardNum]);
+        mon = thisGame.assignMon(mon, mon1[cardNum]);
+        
+        //Check values (OutOfBounds, cardNum, Misc conditions)
+        //Continue if nothing flags
+        checkAndContinue();
         
     }//GEN-LAST:event_img1MouseClicked
 
+    
+    
+    
+    
     private void img2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_img2MouseClicked
         // TODO add your handling code here:
         
-        System.out.println("Beep");
+        System.out.println("Right");
+        
+        //Assignment
+        chur = thisGame.assignChur(chur, chur2[cardNum]);
+        pop = thisGame.assignPop(pop, pop2[cardNum]);
+        army = thisGame.assignArmy(army, army2[cardNum]);
+        mon = thisGame.assignMon(mon, mon2[cardNum]);
+        
+        //Check values (OutOfBounds, cardNum, Misc conditions)
+        //Continue if nothing flags
+        checkAndContinue();
+        
         
     }//GEN-LAST:event_img2MouseClicked
 
+    
+    public void checkAndContinue(){
+    
+    //Different game enders
+        if (chur >= 10){
+            // Church thinks you're a saint, you're not, you starve
+            
+            
+        } else if (pop >= 10) {
+            // Fans storm castle and you are trampled
+            
+            
+        } else if (army >= 10) {
+            // Army grows restless, you are overthrown and beheaded
+            
+            
+            
+        } else if (mon >= 10) {
+            // Invaded by other nation, they were attracted to your great wealth
+            
+            
+            
+        } else if (chur <= 0) {
+            // You are deemed a heretic, and burned at the stake
+            
+            
+        } else if (pop <= 0) {
+            // People hate you, you are dragged out of your castle and stoned
+            
+            
+        } else if(army <= 0) {
+            // Other nation takes advantage of weakness, you are pillaged
+            
+            
+        } else if (mon <= 0) {
+            // Starving and cold, your subjects die off one by one
+            
+            
+        } else if (cardNum >= 30) {
+            //You win! Having reached the end of your life you die a good ruler
+            
+            
+        } else {
+            //Advance
+            
+            advance();
+            
+        }
+    
+    
+}
+    
     
     public void advance(){
         
