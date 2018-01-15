@@ -29,33 +29,39 @@ public class Main extends javax.swing.JFrame {
     
     //Arrays
     //Option 1
-    int[] chur1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    int[] chur1 = {0, 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] pop1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    int[] pop1 = {0, 1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] army1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    int[] army1 = {0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] mon1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    int[] mon1 = {0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     
     //Option 2
-    int[] chur2 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    int[] chur2 = {0, -1, -3, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] pop2 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    int[] pop2 = {0, -1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] army2 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    int[] army2 = {0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] mon2 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    int[] mon2 = {0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     
     //Conversations
-    String[] toYou = {" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+    String[] toYou = {"Intro", "My Queen, the peasants are complaining about a food shortage."
+                    , "My Queen, we wish to mine a nearby mountain, but the church says it is holy ground.",
+                    "My Queen, the church believes there is a witch amongst your subjects",
+                    " ", " ", " ", " ", " ", " ", " ", " ",
                     " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
                     " ", " ", " ", " "};
-    String[] ans1 = {" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+    String[] ans1 = {"Got it", "Increase funding for farmers.",
+                    "Leave it be! Do you wish to anger the Gods?",
+                    "Burn the witch!", " ", " ", " ", " ", " ", " ", " ", " ",
                     " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
                     " ", " ", " ", " "};
-    String[] ans2 = {" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+    String[] ans2 = {"Cool", "Who cares?", "Ignore the church, we need those metals.",
+                    "Don't you touch them!", " ", " ", " ", " ", " ", " ", " ", " ",
                     " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
                     " ", " ", " ", " "};
     
@@ -152,6 +158,7 @@ public class Main extends javax.swing.JFrame {
         text.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
         text.setForeground(new java.awt.Color(255, 255, 255));
         text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        text.setText("Intro\n");
         text.setToolTipText("");
 
         javax.swing.GroupLayout TextPanelLayout = new javax.swing.GroupLayout(TextPanel);
@@ -160,22 +167,24 @@ public class Main extends javax.swing.JFrame {
             TextPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TextPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(text, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(text, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         TextPanelLayout.setVerticalGroup(
             TextPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TextPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(text, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(text, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         LeftOptionPanel.setBackground(new java.awt.Color(101, 66, 105));
         LeftOptionPanel.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
+        op1.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
         op1.setForeground(new java.awt.Color(255, 255, 255));
         op1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        op1.setText("Got it");
         op1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 op1KeyPressed(evt);
@@ -196,17 +205,15 @@ public class Main extends javax.swing.JFrame {
             .addGroup(LeftOptionPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(LeftOptionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(op1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(LeftOptionPanelLayout.createSequentialGroup()
-                        .addComponent(img1)
-                        .addGap(0, 7, Short.MAX_VALUE)))
+                    .addComponent(op1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(img1))
                 .addContainerGap())
         );
         LeftOptionPanelLayout.setVerticalGroup(
             LeftOptionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LeftOptionPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(op1, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(op1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(img1)
                 .addContainerGap())
@@ -215,8 +222,10 @@ public class Main extends javax.swing.JFrame {
         RightOptionPanel.setBackground(new java.awt.Color(101, 66, 105));
         RightOptionPanel.setBorder(new javax.swing.border.SoftBevelBorder(0));
 
+        op2.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
         op2.setForeground(new java.awt.Color(255, 255, 255));
         op2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        op2.setText("Cool");
 
         img2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/CrownIconSmall.png"))); // NOI18N
         img2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -232,17 +241,17 @@ public class Main extends javax.swing.JFrame {
             .addGroup(RightOptionPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(RightOptionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(op2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(op2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightOptionPanelLayout.createSequentialGroup()
-                        .addGap(0, 7, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(img2)))
                 .addContainerGap())
         );
         RightOptionPanelLayout.setVerticalGroup(
             RightOptionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightOptionPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(op2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(op2, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(img2)
                 .addContainerGap())
@@ -259,7 +268,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(TextPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(BGLayout.createSequentialGroup()
                         .addComponent(LeftOptionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 261, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(RightOptionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
