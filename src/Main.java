@@ -1,5 +1,5 @@
 
-import com.sun.glass.events.KeyEvent;
+//import com.sun.glass.events.KeyEvent;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -25,7 +25,10 @@ public class Main extends javax.swing.JFrame {
     // Special conditions
     
     
+    //Constructors
     Game thisGame = new Game(cardNum, chur, pop, army, mon);
+    Write save = new Write();//chur, army, pop, mon, cardNum, "src\\data\\slot1"
+    Read load = new Read();
     
     //Arrays
     //Option 1
@@ -389,37 +392,54 @@ public class Main extends javax.swing.JFrame {
     //Different game enders
         if (chur >= 10){
             // Church thinks you're a saint, you're not, you starve
-            
+            text.setText("The church, believing you to be a saint, has you"
+                    + " undergo ");
+            op1.setText("");
+            op2.setText("");
             
         } else if (pop >= 10) {
             // Fans storm castle and you are trampled
-            
+            text.setText("");
+            op1.setText("");
+            op2.setText("");
             
         } else if (army >= 10) {
             // Army grows restless, you are overthrown and beheaded
-            
+            text.setText("");
+            op1.setText("");
+            op2.setText("");
             
             
         } else if (mon >= 10) {
             // Invaded by other nation, they were attracted to your great wealth
-            
-            
+            text.setText("");
+            op1.setText("");
+            op2.setText("");
             
         } else if (chur <= 0) {
             // You are deemed a heretic, and burned at the stake
-            
+            text.setText("");
+            op1.setText("");
+            op2.setText("");
             
         } else if (pop <= 0) {
             // People hate you, you are dragged out of your castle and stoned
-            
+            text.setText("");
+            op1.setText("");
+            op2.setText("");
             
         } else if(army <= 0) {
             // Other nation takes advantage of weakness, you are pillaged
-            
+            text.setText("");
+            op1.setText("");
+            op2.setText("");
             
         } else if (mon <= 0) {
             // Starving and cold, your subjects die off one by one
-            
+            text.setText("Starving and cold, your subjects die off one by"
+                    + " one until you yourself succumb to famine");
+            op1.setText("");
+            op2.setText("");
             
         } else if (cardNum >= 30) {
             //You win! Having reached the end of your life you die a good ruler
@@ -444,6 +464,20 @@ public class Main extends javax.swing.JFrame {
         op2.setText(ans2[cardNum]);
         
     }
+    
+    
+    public void save(){
+        
+        save.writeTest(chur, army, pop, mon, cardNum, "src\\data\\slot1");
+        
+    }
+    
+    public void load(){
+        
+        
+        
+    }
+    
     
     
     
