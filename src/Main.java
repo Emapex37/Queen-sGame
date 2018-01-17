@@ -21,13 +21,14 @@ public class Main extends javax.swing.JFrame {
     int army = 5;
     int mon = 5;
     
+    int save1Dat = 0, save2Dat = 0, save3Dat = 0, save4Dat = 0;
     
     // Special conditions
     
     
     //Constructors
     Game thisGame = new Game(cardNum, chur, pop, army, mon);
-    Write save = new Write();//chur, army, pop, mon, cardNum, "src\\data\\slot1"
+    Write save = new Write();//chur, army, pop, mon, cardNum, "src\\data\\slotx"
     Read load = new Read();
     
     //Arrays
@@ -70,6 +71,12 @@ public class Main extends javax.swing.JFrame {
     
     
     
+    //First Frame Runtime Stuff (setting things up)
+    
+    //BGData.setEnabled(false);
+    
+    
+    
     /**
      * Creates new form Main
      */
@@ -86,103 +93,73 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BG = new javax.swing.JPanel();
-        TopPanel = new javax.swing.JPanel();
         stat1 = new javax.swing.JLabel();
         stat2 = new javax.swing.JLabel();
         stat3 = new javax.swing.JLabel();
         stat4 = new javax.swing.JLabel();
-        TextPanel = new javax.swing.JPanel();
         text = new javax.swing.JLabel();
-        LeftOptionPanel = new javax.swing.JPanel();
         op1 = new javax.swing.JLabel();
         img1 = new javax.swing.JLabel();
-        RightOptionPanel = new javax.swing.JPanel();
         op2 = new javax.swing.JLabel();
         img2 = new javax.swing.JLabel();
+        s1 = new javax.swing.JLabel();
+        s2 = new javax.swing.JLabel();
+        s3 = new javax.swing.JLabel();
+        s4 = new javax.swing.JLabel();
+        l1 = new javax.swing.JLabel();
+        l2 = new javax.swing.JLabel();
+        l3 = new javax.swing.JLabel();
+        l4 = new javax.swing.JLabel();
+        BGData = new javax.swing.JLabel();
+        BGMenu = new javax.swing.JLabel();
+        BGGame = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        BG.setBackground(new java.awt.Color(41, 26, 57));
-
-        TopPanel.setBackground(new java.awt.Color(101, 66, 105));
+        setMaximumSize(new java.awt.Dimension(1200, 650));
+        setMinimumSize(new java.awt.Dimension(1200, 650));
+        setPreferredSize(new java.awt.Dimension(1200, 650));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
+        getContentPane().setLayout(null);
 
         stat1.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
         stat1.setForeground(new java.awt.Color(255, 255, 255));
         stat1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stat1.setText("5");
+        getContentPane().add(stat1);
+        stat1.setBounds(340, 50, 18, 44);
 
         stat2.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
         stat2.setForeground(new java.awt.Color(255, 255, 255));
         stat2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stat2.setText("5");
+        getContentPane().add(stat2);
+        stat2.setBounds(430, 50, 18, 44);
 
         stat3.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
         stat3.setForeground(new java.awt.Color(255, 255, 255));
         stat3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stat3.setText("5");
+        getContentPane().add(stat3);
+        stat3.setBounds(540, 50, 18, 44);
 
         stat4.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
         stat4.setForeground(new java.awt.Color(255, 255, 255));
         stat4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stat4.setText("5");
-
-        javax.swing.GroupLayout TopPanelLayout = new javax.swing.GroupLayout(TopPanel);
-        TopPanel.setLayout(TopPanelLayout);
-        TopPanelLayout.setHorizontalGroup(
-            TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TopPanelLayout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addComponent(stat1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(stat2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(stat3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(stat4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47))
-        );
-        TopPanelLayout.setVerticalGroup(
-            TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TopPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(stat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(stat2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(stat3, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE))
-                    .addComponent(stat4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        TextPanel.setBackground(new java.awt.Color(101, 66, 105));
-        TextPanel.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        getContentPane().add(stat4);
+        stat4.setBounds(640, 50, 18, 44);
 
         text.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
         text.setForeground(new java.awt.Color(255, 255, 255));
         text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         text.setText("Intro\n");
         text.setToolTipText("");
-
-        javax.swing.GroupLayout TextPanelLayout = new javax.swing.GroupLayout(TextPanel);
-        TextPanel.setLayout(TextPanelLayout);
-        TextPanelLayout.setHorizontalGroup(
-            TextPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TextPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(text, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        TextPanelLayout.setVerticalGroup(
-            TextPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TextPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(text, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        LeftOptionPanel.setBackground(new java.awt.Color(101, 66, 105));
-        LeftOptionPanel.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        getContentPane().add(text);
+        text.setBounds(470, 170, 46, 29);
 
         op1.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
         op1.setForeground(new java.awt.Color(255, 255, 255));
@@ -193,6 +170,8 @@ public class Main extends javax.swing.JFrame {
                 op1KeyPressed(evt);
             }
         });
+        getContentPane().add(op1);
+        op1.setBounds(340, 270, 49, 29);
 
         img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/CrownIconSmall.png"))); // NOI18N
         img1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -200,35 +179,15 @@ public class Main extends javax.swing.JFrame {
                 img1MouseClicked(evt);
             }
         });
-
-        javax.swing.GroupLayout LeftOptionPanelLayout = new javax.swing.GroupLayout(LeftOptionPanel);
-        LeftOptionPanel.setLayout(LeftOptionPanelLayout);
-        LeftOptionPanelLayout.setHorizontalGroup(
-            LeftOptionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LeftOptionPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(LeftOptionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(op1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(img1))
-                .addContainerGap())
-        );
-        LeftOptionPanelLayout.setVerticalGroup(
-            LeftOptionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LeftOptionPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(op1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(img1)
-                .addContainerGap())
-        );
-
-        RightOptionPanel.setBackground(new java.awt.Color(101, 66, 105));
-        RightOptionPanel.setBorder(new javax.swing.border.SoftBevelBorder(0));
+        getContentPane().add(img1);
+        img1.setBounds(300, 460, 142, 89);
 
         op2.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
         op2.setForeground(new java.awt.Color(255, 255, 255));
         op2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         op2.setText("Cool");
+        getContentPane().add(op2);
+        op2.setBounds(640, 270, 37, 29);
 
         img2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/CrownIconSmall.png"))); // NOI18N
         img2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -236,72 +195,75 @@ public class Main extends javax.swing.JFrame {
                 img2MouseClicked(evt);
             }
         });
+        getContentPane().add(img2);
+        img2.setBounds(600, 460, 142, 89);
 
-        javax.swing.GroupLayout RightOptionPanelLayout = new javax.swing.GroupLayout(RightOptionPanel);
-        RightOptionPanel.setLayout(RightOptionPanelLayout);
-        RightOptionPanelLayout.setHorizontalGroup(
-            RightOptionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RightOptionPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(RightOptionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(op2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightOptionPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(img2)))
-                .addContainerGap())
-        );
-        RightOptionPanelLayout.setVerticalGroup(
-            RightOptionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightOptionPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(op2, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(img2)
-                .addContainerGap())
-        );
+        s1.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
+        s1.setForeground(new java.awt.Color(255, 255, 255));
+        s1.setText("Save");
+        getContentPane().add(s1);
+        s1.setBounds(40, 200, 50, 40);
 
-        javax.swing.GroupLayout BGLayout = new javax.swing.GroupLayout(BG);
-        BG.setLayout(BGLayout);
-        BGLayout.setHorizontalGroup(
-            BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(BGLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TextPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(BGLayout.createSequentialGroup()
-                        .addComponent(LeftOptionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(RightOptionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        BGLayout.setVerticalGroup(
-            BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BGLayout.createSequentialGroup()
-                .addComponent(TopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(TextPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(BGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LeftOptionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(RightOptionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
+        s2.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
+        s2.setForeground(new java.awt.Color(255, 255, 255));
+        s2.setText("Save");
+        getContentPane().add(s2);
+        s2.setBounds(100, 200, 50, 40);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        s3.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
+        s3.setForeground(new java.awt.Color(255, 255, 255));
+        s3.setText("Save");
+        getContentPane().add(s3);
+        s3.setBounds(160, 200, 50, 40);
+
+        s4.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
+        s4.setForeground(new java.awt.Color(255, 255, 255));
+        s4.setText("Save");
+        getContentPane().add(s4);
+        s4.setBounds(230, 200, 50, 40);
+
+        l1.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
+        l1.setForeground(new java.awt.Color(255, 255, 255));
+        l1.setText("Load");
+        getContentPane().add(l1);
+        l1.setBounds(40, 250, 50, 40);
+
+        l2.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
+        l2.setForeground(new java.awt.Color(255, 255, 255));
+        l2.setText("Load");
+        getContentPane().add(l2);
+        l2.setBounds(100, 250, 50, 40);
+
+        l3.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
+        l3.setForeground(new java.awt.Color(255, 255, 255));
+        l3.setText("Load");
+        getContentPane().add(l3);
+        l3.setBounds(160, 250, 50, 40);
+
+        l4.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
+        l4.setForeground(new java.awt.Color(255, 255, 255));
+        l4.setText("Load");
+        getContentPane().add(l4);
+        l4.setBounds(220, 250, 50, 40);
+
+        BGData.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QueenData.jpg"))); // NOI18N
+        getContentPane().add(BGData);
+        BGData.setBounds(0, 0, 1200, 650);
+
+        BGMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QueenMenu.jpg"))); // NOI18N
+        getContentPane().add(BGMenu);
+        BGMenu.setBounds(0, 0, 1200, 650);
+
+        BGGame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QueenGame.jpg"))); // NOI18N
+        getContentPane().add(BGGame);
+        BGGame.setBounds(0, 0, 1200, 650);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //Startup method
+    
+    
     private void op1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_op1KeyPressed
         // TODO add your handling code here:
 
@@ -318,6 +280,8 @@ public class Main extends javax.swing.JFrame {
         
     }//GEN-LAST:event_op1KeyPressed
 
+    
+    
     private void img1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_img1MouseClicked
         // TODO add your handling code here:
         
@@ -350,7 +314,13 @@ public class Main extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_img2MouseClicked
-    
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // TODO add your handling code here:
+        
+        //BGData.setEnabled(false);
+        
+    }//GEN-LAST:event_formWindowActivated
     
     
     
@@ -368,7 +338,8 @@ public class Main extends javax.swing.JFrame {
         stat2.setText("" + pop);
         stat3.setText("" + army);
         stat4.setText("" + mon);
-          
+        
+        
     }
     
     public void assignRight(){
@@ -517,15 +488,21 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel BG;
-    private javax.swing.JPanel LeftOptionPanel;
-    private javax.swing.JPanel RightOptionPanel;
-    private javax.swing.JPanel TextPanel;
-    private javax.swing.JPanel TopPanel;
+    private javax.swing.JLabel BGData;
+    private javax.swing.JLabel BGGame;
+    private javax.swing.JLabel BGMenu;
     private javax.swing.JLabel img1;
     private javax.swing.JLabel img2;
+    private javax.swing.JLabel l1;
+    private javax.swing.JLabel l2;
+    private javax.swing.JLabel l3;
+    private javax.swing.JLabel l4;
     private javax.swing.JLabel op1;
     private javax.swing.JLabel op2;
+    private javax.swing.JLabel s1;
+    private javax.swing.JLabel s2;
+    private javax.swing.JLabel s3;
+    private javax.swing.JLabel s4;
     private javax.swing.JLabel stat1;
     private javax.swing.JLabel stat2;
     private javax.swing.JLabel stat3;
