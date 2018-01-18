@@ -93,6 +93,12 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        logo = new javax.swing.JLabel();
+        TitleLabel = new javax.swing.JLabel();
+        NGLabel = new javax.swing.JLabel();
+        DatLabel = new javax.swing.JLabel();
+        ExitLabel = new javax.swing.JLabel();
+        DatBackLabel = new javax.swing.JLabel();
         stat1 = new javax.swing.JLabel();
         stat2 = new javax.swing.JLabel();
         stat3 = new javax.swing.JLabel();
@@ -125,6 +131,65 @@ public class Main extends javax.swing.JFrame {
         });
         getContentPane().setLayout(null);
 
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/QueenLogo.png"))); // NOI18N
+        getContentPane().add(logo);
+        logo.setBounds(450, 40, 230, 210);
+
+        TitleLabel.setFont(new java.awt.Font("Plantagenet Cherokee", 3, 44)); // NOI18N
+        TitleLabel.setForeground(new java.awt.Color(156, 239, 255));
+        TitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TitleLabel.setText("God  Save  the  Queen");
+        getContentPane().add(TitleLabel);
+        TitleLabel.setBounds(320, 270, 490, 50);
+
+        NGLabel.setFont(new java.awt.Font("Pristina", 3, 38)); // NOI18N
+        NGLabel.setForeground(new java.awt.Color(202, 239, 242));
+        NGLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        NGLabel.setText("New Game");
+        NGLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                NGLabelMouseClicked(evt);
+            }
+        });
+        getContentPane().add(NGLabel);
+        NGLabel.setBounds(480, 350, 170, 70);
+
+        DatLabel.setFont(new java.awt.Font("Pristina", 3, 28)); // NOI18N
+        DatLabel.setForeground(new java.awt.Color(191, 226, 229));
+        DatLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DatLabel.setText("Save / Load");
+        DatLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DatLabelMouseClicked(evt);
+            }
+        });
+        getContentPane().add(DatLabel);
+        DatLabel.setBounds(480, 440, 160, 50);
+
+        ExitLabel.setFont(new java.awt.Font("Pristina", 3, 28)); // NOI18N
+        ExitLabel.setForeground(new java.awt.Color(181, 214, 216));
+        ExitLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ExitLabel.setText("Exit");
+        ExitLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExitLabelMouseClicked(evt);
+            }
+        });
+        getContentPane().add(ExitLabel);
+        ExitLabel.setBounds(520, 520, 80, 40);
+
+        DatBackLabel.setFont(new java.awt.Font("Pristina", 3, 36)); // NOI18N
+        DatBackLabel.setForeground(new java.awt.Color(202, 239, 242));
+        DatBackLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DatBackLabel.setText("Back");
+        DatBackLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DatBackLabelMouseClicked(evt);
+            }
+        });
+        getContentPane().add(DatBackLabel);
+        DatBackLabel.setBounds(1070, 560, 90, 40);
+
         stat1.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
         stat1.setForeground(new java.awt.Color(255, 255, 255));
         stat1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -137,7 +202,7 @@ public class Main extends javax.swing.JFrame {
         stat2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stat2.setText("5");
         getContentPane().add(stat2);
-        stat2.setBounds(430, 50, 18, 44);
+        stat2.setBounds(440, 50, 18, 44);
 
         stat3.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
         stat3.setForeground(new java.awt.Color(255, 255, 255));
@@ -318,9 +383,106 @@ public class Main extends javax.swing.JFrame {
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // TODO add your handling code here:
         
-        //BGData.setEnabled(false);
+        //Making everything invisible at start
+        //Backgrounds
+        BGData.setVisible(false);
+        BGGame.setVisible(false);
+        //In-Game Stuff
+        stat1.setVisible(false);
+        stat2.setVisible(false);
+        stat3.setVisible(false);
+        stat4.setVisible(false);
+        text.setVisible(false);
+        op1.setVisible(false);
+        op2.setVisible(false);
+        img1.setVisible(false);
+        img2.setVisible(false);
+        //Data stuff
+        s1.setVisible(false);
+        s2.setVisible(false);
+        s3.setVisible(false);
+        s4.setVisible(false);
+        l1.setVisible(false);
+        l2.setVisible(false);
+        l3.setVisible(false);
+        l4.setVisible(false);
+        DatBackLabel.setVisible(false);
         
     }//GEN-LAST:event_formWindowActivated
+
+    private void ExitLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitLabelMouseClicked
+        // TODO add your handling code here:
+        
+        System.exit(0);
+        
+    }//GEN-LAST:event_ExitLabelMouseClicked
+
+    private void DatLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DatLabelMouseClicked
+        // TODO add your handling code here:
+        
+        //Set elements visible
+        BGData.setVisible(true);
+        s1.setVisible(true);
+        s2.setVisible(true);
+        s3.setVisible(true);
+        s4.setVisible(true);
+        l1.setVisible(true);
+        l2.setVisible(true);
+        l3.setVisible(true);
+        l4.setVisible(true);
+        DatBackLabel.setVisible(true);
+        
+        //Disable other things
+        logo.setVisible(false);
+        TitleLabel.setVisible(false);
+        DatLabel.setVisible(false);
+        ExitLabel.setVisible(false);
+        NGLabel.setVisible(false);
+
+        
+    }//GEN-LAST:event_DatLabelMouseClicked
+
+    private void DatBackLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DatBackLabelMouseClicked
+        // TODO add your handling code here:
+        
+        //Enable other things
+        logo.setVisible(true);
+        TitleLabel.setVisible(true);
+        DatLabel.setVisible(true);
+        ExitLabel.setVisible(true);
+        NGLabel.setVisible(true);
+        
+        //Set elements invisible
+        BGData.setVisible(false);
+        s1.setVisible(false);
+        s2.setVisible(false);
+        s3.setVisible(false);
+        s4.setVisible(false);
+        l1.setVisible(false);
+        l2.setVisible(false);
+        l3.setVisible(false);
+        l4.setVisible(false);
+        DatBackLabel.setVisible(false);
+        
+    }//GEN-LAST:event_DatBackLabelMouseClicked
+
+    private void NGLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NGLabelMouseClicked
+        // TODO add your handling code here:
+        
+        //Change label
+        NGLabel.setText("Continue");
+        
+        //Enable elements
+        
+        
+        //Disable other things
+        logo.setVisible(false);
+        TitleLabel.setVisible(false);
+        DatLabel.setVisible(false);
+        ExitLabel.setVisible(false);
+        NGLabel.setVisible(false);  
+        
+    }//GEN-LAST:event_NGLabelMouseClicked
     
     
     
@@ -445,7 +607,7 @@ public class Main extends javax.swing.JFrame {
     
     public void load(){
         
-        
+        //Set NGLabel to ("Continue")
         
     }
     
@@ -491,12 +653,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel BGData;
     private javax.swing.JLabel BGGame;
     private javax.swing.JLabel BGMenu;
+    private javax.swing.JLabel DatBackLabel;
+    private javax.swing.JLabel DatLabel;
+    private javax.swing.JLabel ExitLabel;
+    private javax.swing.JLabel NGLabel;
+    private javax.swing.JLabel TitleLabel;
     private javax.swing.JLabel img1;
     private javax.swing.JLabel img2;
     private javax.swing.JLabel l1;
     private javax.swing.JLabel l2;
     private javax.swing.JLabel l3;
     private javax.swing.JLabel l4;
+    private javax.swing.JLabel logo;
     private javax.swing.JLabel op1;
     private javax.swing.JLabel op2;
     private javax.swing.JLabel s1;
