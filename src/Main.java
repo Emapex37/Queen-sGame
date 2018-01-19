@@ -33,47 +33,321 @@ public class Main extends javax.swing.JFrame {
     
     //Arrays
     //Option 1
-    int[] chur1 = {0, 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] pop1 = {0, 1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] army1 = {0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] mon1 = {0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int[] chur1 = {0,
+                0,
+                2,
+                1,
+                2,
+                -1,
+                2,
+                0,
+                2,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0};
+    int[] pop1 = {0,
+                1,
+                0,
+                -1,
+                1,
+                0,
+                2,
+                1,
+                1,
+                0,
+                2,
+                3,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0};
+    int[] army1 = {0,
+                0,
+                -1,
+                0,
+                0,
+                -2,
+                2,
+                2,
+                0,
+                -2,
+                1,
+                -1,
+                -10,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0};
+    int[] mon1 = {0,
+                -1,
+                0,
+                0,
+                -1,
+                0,
+                -2,
+                -2,
+                0,
+                0,
+                -2,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0};
     
     //Option 2
-    int[] chur2 = {0, -1, -3, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] pop2 = {0, -1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] army2 = {0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int[] mon2 = {0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int[] chur2 = {0,
+                -1,
+                -3,
+                -1,
+                -1,
+                1,
+                -1,
+                0,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0};
+    int[] pop2 = {0,
+                -1,
+                0,
+                1,
+                -2,
+                1,
+                -2,
+                -1,
+                -2,
+                0,
+                -1,
+                -3,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0};
+    int[] army2 = {0,
+                0,
+                2,
+                0,
+                0,
+                0,
+                -1,
+                -1,
+                0,
+                0,
+                -1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0};
+    int[] mon2 = {0,
+                0,
+                2,
+                0,
+                1,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0};
     
     //Conversations
-    String[] toYou = {"Intro", "My Queen, the peasants are complaining about a food shortage."
+    String[] toYou = {"Intro",
+                    "My Queen, the peasants are complaining about a food shortage."
                     , "My Queen, we wish to mine a nearby mountain, but the church says it is holy ground.",
                     "My Queen, the church believes there is a witch amongst your subjects",
-                    " ", " ", " ", " ", " ", " ", " ", " ",
-                    " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+                    "Your Majesty! There is a plague sweeping our Kingdom! Should we help the sick or dispose of them?",
+                    "My Queen, our scout has spotted an army heading to attack us! Should we fight back or try to negotiate?",
+                    "My Queen, the kingdom is running out of food!! Should buy more from neighbouring villages and kingdoms or let the peasants starve?",
+                    "A group of skilled hunters are looking to be hired by you, My Queen, to bring good quality food to our kingdom!",
+                    "We believe there are a group of witches that are hiding in our Kingdom. My Queen, shall we burn them at the stake or use them for their power?",
+                    "A general in your army has been cheating on his wife!",
+                    "The castle is throwing a feast for the new year, how would you like the food?",
+                    "The civilians are demanding that taxes be lowered!",
+                    "An enemy army has approached your castle and are offering us a giant wooden horse. Should we accept?",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
                     " ", " ", " ", " "};
-    String[] ans1 = {"Got it", "Increase funding for farmers.",
+    String[] ans1 = {"Got it",
+                    "Increase funding for farmers.",
                     "Leave it be! Do you wish to anger the Gods?",
-                    "Burn the witch!", " ", " ", " ", " ", " ", " ", " ", " ",
-                    " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+                    "Burn the witch!",
+                    "Help them, of course!",
+                    "To arms!",
+                    "We need to overcome this crisis. Buy all the food we can afford.",
+                    "Hire them! I've always wanted fresh food.",
+                    "Hunt them down and kill them, obviously!",
+                    "Unacceptible! I don't need people like that fighting for me.",
+                    "Only the best for our people.",
+                    "Perhaps we have been too hard on them...",
+                    "OH GOOD, I LOVE HORSES!",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ", " ", " ", " ", " ", " ",
                     " ", " ", " ", " "};
-    String[] ans2 = {"Cool", "Who cares?", "Ignore the church, we need those metals.",
-                    "Don't you touch them!", " ", " ", " ", " ", " ", " ", " ", " ",
-                    " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+    String[] ans2 = {"Cool",
+                    "Who cares?",
+                    "Ignore the church, we need those metals.",
+                    "Don't you touch them!",
+                    "Don't risk it.",
+                    "Hold it, let's see if they'll listen to reason.",
+                    "Let the lower class starve, they aren't important anyways.",
+                    "Turn them down, I am satisfied with my meals as they are.",
+                    "We'd be fools to give up such power.",
+                    "Don't bring your stupid gossip to me!",
+                    "Anything will do.",
+                    "Who are they to demand anything?",
+                    "I already have, like, 14 horses I don't need any more.",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ", " ", " ", " ", " ", " ", " ", " ",
                     " ", " ", " ", " "};
     
     
-    
-    //First Frame Runtime Stuff (setting things up)
-    
-    //BGData.setEnabled(false);
     
     
     
@@ -99,6 +373,7 @@ public class Main extends javax.swing.JFrame {
         DatLabel = new javax.swing.JLabel();
         ExitLabel = new javax.swing.JLabel();
         DatBackLabel = new javax.swing.JLabel();
+        ToMenuLabel = new javax.swing.JLabel();
         stat1 = new javax.swing.JLabel();
         stat2 = new javax.swing.JLabel();
         stat3 = new javax.swing.JLabel();
@@ -190,44 +465,56 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(DatBackLabel);
         DatBackLabel.setBounds(1070, 560, 90, 40);
 
+        ToMenuLabel.setFont(new java.awt.Font("Pristina", 3, 36)); // NOI18N
+        ToMenuLabel.setForeground(new java.awt.Color(202, 239, 242));
+        ToMenuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ToMenuLabel.setText("Main Menu");
+        ToMenuLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ToMenuLabelMouseClicked(evt);
+            }
+        });
+        getContentPane().add(ToMenuLabel);
+        ToMenuLabel.setBounds(990, 560, 170, 40);
+
         stat1.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
-        stat1.setForeground(new java.awt.Color(255, 255, 255));
+        stat1.setForeground(new java.awt.Color(156, 239, 255));
         stat1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stat1.setText("5");
         getContentPane().add(stat1);
-        stat1.setBounds(340, 50, 18, 44);
+        stat1.setBounds(380, 50, 18, 44);
 
         stat2.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
-        stat2.setForeground(new java.awt.Color(255, 255, 255));
+        stat2.setForeground(new java.awt.Color(156, 239, 255));
         stat2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stat2.setText("5");
         getContentPane().add(stat2);
-        stat2.setBounds(440, 50, 18, 44);
+        stat2.setBounds(510, 50, 18, 44);
 
         stat3.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
-        stat3.setForeground(new java.awt.Color(255, 255, 255));
+        stat3.setForeground(new java.awt.Color(156, 239, 255));
         stat3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stat3.setText("5");
         getContentPane().add(stat3);
-        stat3.setBounds(540, 50, 18, 44);
+        stat3.setBounds(640, 50, 18, 44);
 
         stat4.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
-        stat4.setForeground(new java.awt.Color(255, 255, 255));
+        stat4.setForeground(new java.awt.Color(156, 239, 255));
         stat4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stat4.setText("5");
         getContentPane().add(stat4);
-        stat4.setBounds(640, 50, 18, 44);
+        stat4.setBounds(750, 50, 18, 44);
 
         text.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
-        text.setForeground(new java.awt.Color(255, 255, 255));
+        text.setForeground(new java.awt.Color(202, 239, 242));
         text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         text.setText("Intro\n");
         text.setToolTipText("");
         getContentPane().add(text);
-        text.setBounds(470, 170, 46, 29);
+        text.setBounds(340, 170, 460, 100);
 
         op1.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
-        op1.setForeground(new java.awt.Color(255, 255, 255));
+        op1.setForeground(new java.awt.Color(202, 239, 242));
         op1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         op1.setText("Got it");
         op1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -236,7 +523,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(op1);
-        op1.setBounds(340, 270, 49, 29);
+        op1.setBounds(350, 270, 110, 180);
 
         img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/CrownIconSmall.png"))); // NOI18N
         img1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -245,14 +532,14 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(img1);
-        img1.setBounds(300, 460, 142, 89);
+        img1.setBounds(330, 460, 142, 89);
 
         op2.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
-        op2.setForeground(new java.awt.Color(255, 255, 255));
+        op2.setForeground(new java.awt.Color(202, 239, 242));
         op2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         op2.setText("Cool");
         getContentPane().add(op2);
-        op2.setBounds(640, 270, 37, 29);
+        op2.setBounds(670, 270, 110, 180);
 
         img2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/CrownIconSmall.png"))); // NOI18N
         img2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -261,7 +548,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(img2);
-        img2.setBounds(600, 460, 142, 89);
+        img2.setBounds(650, 460, 142, 89);
 
         s1.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
         s1.setForeground(new java.awt.Color(255, 255, 255));
@@ -386,7 +673,7 @@ public class Main extends javax.swing.JFrame {
         //Making everything invisible at start
         //Backgrounds
         BGData.setVisible(false);
-        BGGame.setVisible(false);
+        
         //In-Game Stuff
         stat1.setVisible(false);
         stat2.setVisible(false);
@@ -397,6 +684,7 @@ public class Main extends javax.swing.JFrame {
         op2.setVisible(false);
         img1.setVisible(false);
         img2.setVisible(false);
+        ToMenuLabel.setVisible(false);
         //Data stuff
         s1.setVisible(false);
         s2.setVisible(false);
@@ -407,6 +695,8 @@ public class Main extends javax.swing.JFrame {
         l3.setVisible(false);
         l4.setVisible(false);
         DatBackLabel.setVisible(false);
+        
+        //System.out.println("Salad\n kills");
         
     }//GEN-LAST:event_formWindowActivated
 
@@ -473,7 +763,16 @@ public class Main extends javax.swing.JFrame {
         NGLabel.setText("Continue");
         
         //Enable elements
-        
+        img1.setVisible(true);
+        img2.setVisible(true);
+        op1.setVisible(true);
+        op2.setVisible(true);
+        stat1.setVisible(true);
+        stat2.setVisible(true);
+        stat3.setVisible(true);
+        stat4.setVisible(true);
+        text.setVisible(true);
+        ToMenuLabel.setVisible(true);
         
         //Disable other things
         logo.setVisible(false);
@@ -481,8 +780,34 @@ public class Main extends javax.swing.JFrame {
         DatLabel.setVisible(false);
         ExitLabel.setVisible(false);
         NGLabel.setVisible(false);  
+        BGMenu.setVisible(false);
         
     }//GEN-LAST:event_NGLabelMouseClicked
+
+    private void ToMenuLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ToMenuLabelMouseClicked
+        // TODO add your handling code here:
+        
+        //Disable elements
+        img1.setVisible(false);
+        img2.setVisible(false);
+        op1.setVisible(false);
+        op2.setVisible(false);
+        stat1.setVisible(false);
+        stat2.setVisible(false);
+        stat3.setVisible(false);
+        stat4.setVisible(false);
+        text.setVisible(false);
+        ToMenuLabel.setVisible(false);
+        
+        //Enable other things
+        logo.setVisible(true);
+        TitleLabel.setVisible(true);
+        DatLabel.setVisible(true);
+        ExitLabel.setVisible(true);
+        NGLabel.setVisible(true);  
+        BGMenu.setVisible(true);
+        
+    }//GEN-LAST:event_ToMenuLabelMouseClicked
     
     
     
@@ -658,6 +983,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel ExitLabel;
     private javax.swing.JLabel NGLabel;
     private javax.swing.JLabel TitleLabel;
+    private javax.swing.JLabel ToMenuLabel;
     private javax.swing.JLabel img1;
     private javax.swing.JLabel img2;
     private javax.swing.JLabel l1;
